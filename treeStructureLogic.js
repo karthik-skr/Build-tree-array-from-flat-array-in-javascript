@@ -1,9 +1,9 @@
-var a = [{"country":"india","gender":"male","type":"lower","class":"X"},
+var data = [{"country":"india","gender":"male","type":"lower","class":"X"},
 			{"country":"china","gender":"female","type":"upper"},
 			{"country":"india","gender":"female","type":"lower"},
 			{"country":"india","gender":"female","type":"upper"}];
-var s = ["country","type","gender","class"];
-var treeData = createHieArr(a,s);
+var seq = ["country","type","gender","class"];
+var treeData = createHieArr(data,seq);
 console.log(treeData)
 function createHieArr(data,seq){
 	var hieObj = createHieobj(data,seq,0),
