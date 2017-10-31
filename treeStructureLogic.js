@@ -5,37 +5,6 @@ var data = [{"country":"india","gender":"male","type":"lower","class":"X"},
 var seq = ["country","type","gender","class"];
 var treeData = createHieArr(data,seq);
 console.log(treeData)
-/*
-@Output will be as shown below:
- [
-  {
-    "name": "Top Level",
-    "parent": "null",
-    "children": [
-      {
-        "name": "india",
-        "parent": "Top Level",
-        "children": [
-          {
-            "name": "male",
-            "parent": "india"
-			..........
-          },
-          {
-            "name": "female",
-            "parent": "india"
-			...........
-          }
-        ]
-      },
-	  {
-        "name": "china",
-	  ...............
-    ]
-  }
-];
-
-*/
 function createHieArr(data,seq){
 	var hieObj = createHieobj(data,seq,0),
 		hieArr = convertToHieArr(hieObj,"Top Level");
@@ -72,3 +41,34 @@ function createHieArr(data,seq){
 		return childObj;
 	}
 }
+
+/*
+@@@@@@@@@@@@@ Output will be as shown below:
+ [
+  {
+    "name": "Top Level",
+    "parent": "null",
+    "children": [
+      {
+        "name": "india",
+        "parent": "Top Level",
+        "children": [
+          {
+            "name": "male",
+            "parent": "india"
+			..........
+          },
+          {
+            "name": "female",
+            "parent": "india"
+			...........
+          }
+        ]
+      },
+	  {
+        "name": "china",
+	  ...............
+    ]
+  }
+];
+*/
