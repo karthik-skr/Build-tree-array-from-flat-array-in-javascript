@@ -12,11 +12,8 @@ function createHieArr(data,seq){
 				     "children" : hieArr}]
 	function convertToHieArr(eachObj,parent){
 		var arr = [];
-		var parentName = "none";
-		if(parent)
-			parentName = parent;
 		for(var i in eachObj){
-			arr.push({"name":i,"parent":parentName,"children":convertToHieArr(eachObj[i],i)})
+			arr.push({"name":i,"parent":parent,"children":convertToHieArr(eachObj[i],i)})
 		}
 		return arr;
 	}
